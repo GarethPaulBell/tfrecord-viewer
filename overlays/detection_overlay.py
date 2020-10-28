@@ -11,7 +11,7 @@ class DetectionOverlay:
   def __init__(self, args):
     self.args = args
     self.labels_to_highlight = args.labels_to_highlight.split(";")
-    self.font = ImageFont.default()
+    self.font = ImageFont.load_default()
 
   def apply_overlay(self, image_bytes, feature):
     """Apply annotation overlay over input image.
